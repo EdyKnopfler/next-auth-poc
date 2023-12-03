@@ -26,6 +26,10 @@ input {
   border: 1px solid #666;
 }
 
+button {
+  min-width: 75px;
+}
+
 .formButtons {
   margin: 0;
   text-align: center;

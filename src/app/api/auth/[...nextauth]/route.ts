@@ -13,6 +13,8 @@ const nextAuthOptions: NextAuthOptions = {
       },
 
       async authorize(credentials /*, req*/) {
+        console.log('logando com', credentials)
+
         const response = {  // await fetch('...')
           user: { id: '1', name: 'Kânia', email: 'kania@psim.com' },
         }

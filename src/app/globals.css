@@ -17,11 +17,13 @@ p {
 }
 
 input, button {
-  padding: 3px;
+  padding: 5px;
 }
 
 input {
+  border-radius: 3px;
   width: 100%;
+  border: 1px solid #666;
 }
 
 .formButtons {

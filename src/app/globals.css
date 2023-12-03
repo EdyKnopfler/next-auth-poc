@@ -4,3 +4,27 @@
   margin: 0;
 }
 
+form {
+  margin: 1em auto;
+  padding: 1em;
+  max-width: 400px;
+  border: 1px solid #CCC;
+  border-radius: 5px;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+input, button {
+  padding: 3px;
+}
+
+input {
+  width: 100%;
+}
+
+.formButtons {
+  margin: 0;
+  text-align: center;
+}

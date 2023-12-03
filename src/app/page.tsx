@@ -7,6 +7,7 @@ import { SyntheticEvent, useState } from "react"
 export default function Home() {
   const [email, setEmail] = useState<string>('')
   const [password, setPassword] = useState<string>('')
+  const [invalidLogin, setInvalidLogin] = useState<boolean>(false)
   const router = useRouter()
 
   async function doLogin(event: SyntheticEvent) {
@@ -16,7 +17,12 @@ export default function Home() {
       { email, password, redirect: false })
     
     if (result?.error) {
-      console.error(result)
+      if (result.error === 'CredentialsSignin') {
+        setInvalidLogin(true)
+      } else {
+        console.error(result)
+      }
+
       return
     }
 
@@ -37,6 +43,7 @@ export default function Home() {
           onChange={(e) => setPassword(e.target.value)}
         />
       </p>
+      {invalidLogin && <p>Login inválido!</p>}
       <p className="formButtons">
         <button type="submit">Entrar</button>
       </p>
